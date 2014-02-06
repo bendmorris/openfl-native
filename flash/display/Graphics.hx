@@ -141,7 +141,7 @@ class Graphics {
 	}
 	
 	
-	public function drawTiles (sheet:Tilesheet, data:Array<Float>, smooth:Bool = false, flags:Int = 0):Void {
+	public function drawTiles (sheet:Tilesheet, data:Array<Float>, smooth:Bool = false, flags:Int = 0, dataSize:Int = -1):Void {
 		
 		beginBitmapFill (sheet.__bitmap, null, false, smooth);
 		
@@ -151,7 +151,7 @@ class Graphics {
 			
 		}
 		
-		lime_gfx_draw_tiles (__handle, sheet.__handle, data, flags);
+		lime_gfx_draw_tiles (__handle, sheet.__handle, data, flags, dataSize);
 		
 	}
 	
