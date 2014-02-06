@@ -165,6 +165,11 @@ class Stage extends DisplayObjectContainer {
 	}
 	
 	
+	public function getJoystickName (id:Int):String {
+		return lime_stage_get_joystick_name(__handle, id);
+	}
+	
+	
 	@:noCompletion private function __checkFocusInOuts (event:Dynamic, stack:Array<InteractiveObject>):Void {
 		
 		var newLength = stack.length;
@@ -1311,6 +1316,7 @@ class Stage extends DisplayObjectContainer {
 	private static var lime_stage_set_fixed_orientation = Lib.load ("lime", "lime_stage_set_fixed_orientation", 1);
 	private static var lime_stage_get_orientation = Lib.load ("lime", "lime_stage_get_orientation", 0);
 	private static var lime_stage_get_normal_orientation = Lib.load ("lime", "lime_stage_get_normal_orientation", 0);
+	private static var lime_stage_get_joystick_name = Lib.load ("lime", "lime_stage_get_joystick_name", 2);
 	
 	
 }
